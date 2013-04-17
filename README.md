@@ -20,7 +20,7 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 
 ## styling
 
-Add all size-constraint styles to the parent, data-scalable element and not the <img> itself, which has it's width and height styles explicitly set by the script such that it fits the parent.
+Add all size-constraint styles to the parent, data-scalable element and not the &lt;img&gt; itself, which has it's width and height styles explicitly set by the script such that it fits the parent.
 
 Scalables.js adds an "enhanced" class to the body, allowing you to style your fallback thumbnail + text separately from your larger, scaled images.
 
@@ -43,7 +43,7 @@ Scalables.js adds an "enhanced" class to the body, allowing you to style your fa
 	padding-right: 0;
 	}
 	
-/* sizing for our image */
+/* sizing */
 .enhanced .pic {
 	max-width: 80%;
 	margin: 0 auto;
