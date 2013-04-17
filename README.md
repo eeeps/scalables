@@ -23,7 +23,7 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 ## examples
 
 - [Big pictures from spain](http://eeeps.github.com/scalables/examples/spain.html) ([no-js](http://eeeps.github.com/scalables/examples/spain-no-js.html))
-- [A blog about oats](http://eeeps.github.com/scalables/examples/blog.html) ([no-js](http://eeeps.github.com/scalables/examples/spain-no-js.html))
+- [A blog about oats](http://eeeps.github.com/scalables/examples/blog.html) ([no-js](http://eeeps.github.com/scalables/examples/blog-no-js.html))
 
 ## styling
 
