@@ -224,7 +224,7 @@ document.getElementsByTagName('html')[0].className += ' enhanced';
 
 var scalableEls = document.querySelectorAll('[data-scalable]'),
 	scalables = [];
-	
+
 for ( var i = 0, len = scalableEls.length; i < len; i++ ) {
 
 	scalables.push( new Scalable( scalableEls[i] ) );

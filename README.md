@@ -20,8 +20,8 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 
 ## examples
 
-[Big pictures from spain](http://htmlpreview.github.io/?https://github.com/eeeps/scalables/blob/master/examples/blog.html)
-[A blog about oats](http://htmlpreview.github.io/?https://github.com/eeeps/scalables/blob/master/examples/spain.html)
+- [Big pictures from spain](http://eeeps.github.com/scalables/examples/blog.html)
+- [A blog about oats](http://eeeps.github.com/scalables/examples/spain.html)
 
 ## why, thanks
 
