@@ -1,0 +1,12 @@
+/* don't flash the thumbnail before we scale it up */		
+.js:not(.doh) [data-scalable] > * { display: none; }
+.js.enhanced [data-scalable] img { display: block; }
+
+/* a spoonfull of sugar to help the herky-jerky delayed resizing go down */
+[data-scalable].scaled img { 
+	-webkit-transition: width 0.25s ease, height 0.25s ease;
+	-moz-transition: width 0.25s ease, height 0.25s ease;
+	-ms-transition: width 0.25s ease, height 0.25s ease;
+	-o-transition: width 0.25s ease, height 0.25s ease;
+	transition: width 0.25s ease, height 0.25s ease;
+	}

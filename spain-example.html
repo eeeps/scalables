@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scalable Bitmap Graphics Example - My Spanish Vacation</title>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <link rel="stylesheet" href="scalables.css" />
+    
+    <style>
+    
+    * { box-sizing: border-box; }
+    
+    body {
+	    font-family: sans-serif;
+	    font-size: 0.825rem;
+	    }
+    
+
+	.photo {
+		margin: 1em 0;
+		background-color: #f8f8f8;
+		padding: 0.5em;
+		min-height: 100px;
+		}
+	
+	.photo img {
+		margin: 0 auto;
+		}
+	
+	.enhanced .photo { 
+		padding: 0;
+		}
+		/* I wish the vh unit worked consistently across browsers */
+		@media (min-height: 256px) { .enhanced .photo { max-height: 250px; } }
+		@media (min-height: 384px) { .enhanced .photo { max-height: 375px; } }
+		@media (min-height: 512px) { .enhanced .photo { max-height: 500px; } }
+		@media (min-height: 768px) { .enhanced .photo { max-height: 750px; } }
+		@media (min-height: 1024px) { .enhanced .photo { max-height: 1000px; } }
+		@media (min-height: 1536px) { .enhanced .photo { max-height: 1500px; } }		
+		@media (min-height: 2048px) { .enhanced .photo { max-height: 2000px; } }
+		@media (min-height: 3072px) { .enhanced .photo { max-height: 3000px; } }		
+		@media (min-height: 4096px) { .enhanced .photo { max-height: 4000px; } }
+		
+	.enhanced .photo img {
+		display: block;
+		margin: 0 auto;
+		float: none;
+		}
+		
+	@media (min-width: 400px) {
+		.photo { padding-left: 124px; }
+		.photo img { float: left; margin-left: -116px; }
+		body {font-size: 1rem;}
+	}
+
+    </style>
+    
+</head>
+
+<body>
+	<script>document.getElementsByTagName('html')[0].className += ' js';</script>
+
+
+	<article>
+	
+		<h1>My Spanish Vacation</h1>
+	
+	
+		<div data-scalable class="photo">
+			<img src="images/DSC_6402/thumb.jpg" width="100" height="67" alt="A peacock begs for food" />
+			<p>View image:</p>
+			<ul>
+				<li><a href="images/DSC_6402/full.jpg" data-width="4608" data-height="3072">fullsize (4608 × 3072 pixels, 3 MB)</a></li>
+				<li><a href="images/DSC_6402/half.jpg" data-width="2304" data-height="1536">half (906 kB)</a></li>
+				<li><a href="images/DSC_6402/quarter.jpg" data-width="1152" data-height="768">quarter (316 kB)</a></li>
+				<li><a href="images/DSC_6402/8th.jpg" data-width="576" data-height="384">eighth (110 kB)</a></li>
+				<li><a href="images/DSC_6402/16th.jpg" data-width="288" data-height="192">sixteenth (38 kB)</a></li>
+			</ul>
+		</div>
+	
+		<div data-scalable class="photo">
+			<img src="images/DSC_6714-t-Panorama/thumb.jpg" width="46" height="100" alt="A view of the ceiling of the Mezquita, Cordoba" />
+			<p>View image:</p>
+			<ul>
+				<li><a href="images/DSC_6714-t-Panorama/full.jpg" data-width="4710" data-height="10248">fullsize (4710 × 10248 pixels, 13.4 MB)</a></li>
+				<li><a href="images/DSC_6714-t-Panorama/half.jpg" data-width="2355" data-height="5124">half (3.9 MB)</a></li>
+				<li><a href="images/DSC_6714-t-Panorama/quarter.jpg" data-width="1178" data-height="2562">quarter (1.2 MB)</a></li>
+				<li><a href="images/DSC_6714-t-Panorama/8th.jpg" data-width="589" data-height="1281">eighth (336 kB)</a></li>
+				<li><a href="images/DSC_6714-t-Panorama/16th.jpg" data-width="295" data-height="640">sixteenth (96 kB)</a></li>
+				<li><a href="images/DSC_6714-t-Panorama/32nd.jpg" data-width="148" data-height="320"><sup>1</sup>&frasl;<sub>32</sub> (31 kB)</a></li>
+			</ul>
+		</div>
+		
+		<div data-scalable class="photo">
+			<img src="images/DSC_6951-Panorama/thumb.jpg" width="100" height="38" alt="Panorama of a circular arena surrounded by stone columns at the Alhambra." />
+			<p>View image:</p>
+			<ul>
+				<li><a href="images/DSC_6951-Panorama/full.jpg" data-width="11623" data-height="4440">fullsize (11623 × 4440 pixels, 7.8 MB)</a></li>
+				<li><a href="images/DSC_6951-Panorama/half.jpg" data-width="5811" data-height="2220">half (2.3 MB)</a></li>
+				<li><a href="images/DSC_6951-Panorama/quarter.jpg" data-width="2906" data-height="1110">quarter (666 kB)</a></li>
+				<li><a href="images/DSC_6951-Panorama/8th.jpg" data-width="1453" data-height="555">eighth (194 kB)</a></li>
+				<li><a href="images/DSC_6951-Panorama/16th.jpg" data-width="726" data-height="278">sixteenth (61 kB)</a></li>
+				<li><a href="images/DSC_6951-Panorama/32nd.jpg" data-width="363" data-height="139"><sup>1</sup>&frasl;<sub>32</sub> (23 kB)</a></li>
+			</ul>
+		</div>
+
+
+		<div data-scalable class="photo">
+			<img src="images/DSC_7125/thumb.jpg" width="100" height="67" alt="A young woman jumps for joy atop a turret at the Alhambra, overlooking the city of Grenada." />
+			<p>View image:</p>
+			<ul>
+				<li><a href="images/DSC_7125/full.jpg" data-width="4296" data-height="2864">fullsize (4296 × 2864 pixels, 2.4 MB)</a></li>
+				<li><a href="images/DSC_7125/half.jpg" data-width="2148" data-height="1432">half (728 kB)</a></li>
+				<li><a href="images/DSC_7125/quarter.jpg" data-width="1074" data-height="716">quarter (213 kB)</a></li>
+				<li><a href="images/DSC_7125/8th.jpg" data-width="537" data-height="358">eighth (64 kB)</a></li>
+				<li><a href="images/DSC_7125/16th.jpg" data-width="269" data-height="179">sixteenth (23 kB)</a></li>
+			</ul>
+		</div>
+		
+	</article>
+
+
+	<script src="scalables.js"></script>
+
+
+</body>
+</html>
