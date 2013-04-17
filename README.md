@@ -29,7 +29,7 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 
 Apply any & all sizing & positioning styles to the parent, &lt;data-scalable&gt; element and not to the &lt;img&gt; itself, which has its width and height styles explicitly set by the script such that it will fill & fit within the parent.
 
-Scalables.js adds an "enhanced" class to the root element, allowing you to style your fallback thumbnail + text separately from your enhanced, scaled images.
+Scalables.js adds an "enhanced" class to the root element, allowing you to style your fallback thumbnail + text links separately from your enhanced, scaled images.
 
 ```css
 /* styles for the "unenhanced" fallback */
