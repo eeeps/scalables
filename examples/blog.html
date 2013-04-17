@@ -2,82 +2,15 @@
 <html lang="en">
 
 <head>
-
 	<title>Scalable Bitmaps Example - My Blog</title>
-
-
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
+    <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="../scalables.css" />
-			
-	<style>
-
-		* { box-sizing: border-box; }
-
-		body {
-			min-width: 20em;
-			max-width: 80em;
-			font-family: sans-serif;
-			line-height: 1.6em;
-			margin: 0 auto;
-			padding: 1em;
-			}
-	 			
-		h1 { width: 90%; 
-			margin-left: auto;
-			margin-right: auto;
-			}
-		
-		article, aside {
-			width: 80%;
-			margin: 5em auto;
-			}
-		
-		article h2 { margin-bottom: 0.25em;}
-		
-		date { 
-			display: block;
-			margin-bottom: 1.5em; 
-			}
-		
-		.pic {
-			font-size: .75em;
-			line-height: 1.2em;
-			max-width: 100%;
-			padding: 0.5em;
-			margin: 0 auto;
-			}
-		
-		.pic img {
-			outline: .25em solid white;
-			box-shadow: 0 .125em .25em .25em rgba(0,0,0,0.25);
-			}
-		
-		.enhanced .pic {
-			padding: 0.25em;
-			}
-
-		@media (min-width: 32em) {
-		
-			.main {
-				width: 75%;
-				float: left;
-				}
-
-			aside {
-				float: right;
-				width: 25%;
-				margin-top: 6.625em;
-				}
-		}
-
-    </style>
-    
+	<script>document.getElementsByTagName('html')[0].className += ' js';</script>
 </head>
 
 <body>
-	<script>document.getElementsByTagName('html')[0].className += ' js';</script>
 
 	<div class="main">
 		
@@ -86,7 +19,7 @@
 		<article>
 			
 			<h2>All About Oats!</h2>
-			<date datetime="2013-01-17">January 17th, 2013</date>
+			<time datetime="2013-01-17">January 17th, 2013</date>
 			
 			<div class="blog pic" data-scalable>
 
@@ -123,7 +56,6 @@
 		</div>
 		
 		<p>I love oats!</p>
-		
 		
 	</aside>
 

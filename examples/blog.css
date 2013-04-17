@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+
+body {
+	min-width: 20em;
+	max-width: 80em;
+	font-family: sans-serif;
+	line-height: 1.6em;
+	margin: 0 auto;
+	padding: 1em;
+	}
+		
+h1 { width: 90%; 
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+article, aside {
+	width: 80%;
+	margin: 5em auto;
+	}
+
+article h2 { margin-bottom: 0.25em;}
+
+time { 
+	display: block;
+	margin-bottom: 1.5em; 
+	}
+
+.pic {
+	font-size: .75em;
+	line-height: 1.2em;
+	max-width: 100%;
+	padding: 0.5em;
+	margin: 0 auto;
+	}
+
+.pic img {
+	outline: .25em solid white;
+	box-shadow: 0 .125em .25em .25em rgba(0,0,0,0.25);
+	}
+
+.enhanced .pic {
+	padding: 0.25em;
+	}
+
+@media (min-width: 32em) {
+
+	.main {
+		width: 75%;
+		float: left;
+		}
+
+	aside {
+		float: right;
+		width: 25%;
+		margin-top: 6.625em;
+		}
+}

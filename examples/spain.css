@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: sans-serif;
+    font-size: 0.825rem;
+    }
+
+
+.photo {
+	margin: 1em 0;
+	background-color: #f8f8f8;
+	padding: 0.5em;
+	min-height: 100px;
+	}
+
+.photo img {
+	margin: 0 auto;
+	}
+
+.enhanced .photo { 
+	padding: 0;
+	}
+	/* I wish the vh unit worked consistently across browsers */
+	@media (min-height: 256px) { .enhanced .photo { max-height: 250px; } }
+	@media (min-height: 384px) { .enhanced .photo { max-height: 375px; } }
+	@media (min-height: 512px) { .enhanced .photo { max-height: 500px; } }
+	@media (min-height: 768px) { .enhanced .photo { max-height: 750px; } }
+	@media (min-height: 1024px) { .enhanced .photo { max-height: 1000px; } }
+	@media (min-height: 1536px) { .enhanced .photo { max-height: 1500px; } }		
+	@media (min-height: 2048px) { .enhanced .photo { max-height: 2000px; } }
+	@media (min-height: 3072px) { .enhanced .photo { max-height: 3000px; } }		
+	@media (min-height: 4096px) { .enhanced .photo { max-height: 4000px; } }
+	
+.enhanced .photo img {
+	display: block;
+	margin: 0 auto;
+	float: none;
+	}
+	
+@media (min-width: 400px) {
+	.photo { padding-left: 124px; }
+	.photo img { float: left; margin-left: -116px; }
+	body {font-size: 1rem;}
+}
