@@ -43,7 +43,7 @@ Scalables.js adds an "enhanced" class to the root element, allowing you to style
 	padding-right: 0;
 	}
 	
-/* sizing of the scaled-up pic */
+/* sizing & layout for the scaled-up pic */
 .enhanced .pic {
 	max-width: 80%;
 	margin: 0 auto;
