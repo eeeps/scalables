@@ -40,14 +40,12 @@ Scalables.js adds an "enhanced" class to the root element, allowing you to style
 
 .pic img {
 	float: left;
-	padding-right: 1em;
 	}
 
 /* undo! */
 .enhanced .pic img {
 	float: none;
-	padding-right: 0;
-	}
+}
 	
 /* sizing & layout for the scaled-up pic */
 .enhanced .pic {
