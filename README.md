@@ -2,21 +2,23 @@
 
 A responsive bitmap images thing, focusing on describing resources rather than viewport conditions, allowing for a full separation of content and presentation.
 
-<data-scalable> elements contain one thumbnail <img> and any number of larger images, linked to in <a> elements with explicitly marked-up data-width and data-height attributes. Like this:
+&lt;data-scalable&gt; elements contain one thumbnail &lt;img&gt; and any number of larger images, linked to in &lt;a&gt; elements with explicitly marked-up data-width and data-height attributes. Like this:
 
-	<div data-scalable>
-		<img src="thumb.jpg" width="100" height="100" alt="" />
-		<p>View image:</p>
-		<ul>
-			<li><a href="full.jpg" data-width="1024" data-height="1024">fullsize (1024 x 1024 pixels, 213 kB)</a></li>
-			<li><a href="half.jpg" data-width="512" data-height="512">half (48 kB)</a></li>
-			<li><a href="quarter.jpg" data-width="256" data-height="256">quarter (14 kB)</a></li>
-		</ul>
-	</div>
+```html
+<div data-scalable>
+	<img src="thumb.jpg" width="100" height="100" alt="" />
+	<p>View image:</p>
+	<ul>
+		<li><a href="full.jpg" data-width="1024" data-height="1024">fullsize (1024 x 1024 pixels, 213 kB)</a></li>
+		<li><a href="half.jpg" data-width="512" data-height="512">half (48 kB)</a></li>
+		<li><a href="quarter.jpg" data-width="256" data-height="256">quarter (14 kB)</a></li>
+	</ul>
+</div>
+```
 
 On load and after any resize or orientationchange event, scalables.js evaluates how much room is available for the image within the current layout and loads the appropriate source.
 
-When styling your scalables – setting widths, max-heights, or what-have-you – style the containing <data-scalable> element, NOT the img within.
+When styling your scalables – setting widths, max-heights, or what-have-you – style the containing &lt;data-scalable&gt; element, NOT the img within.
 
 ## why, thanks
 
@@ -26,7 +28,9 @@ This arose as an attempt to give form to some of the thoughts I found myself spi
 
 If you don't want the un-scaled thumbnail to flash, you'll need to include scalables.css and something or other which will add a "js" class to the html element. Modernizr works; so will adding this to the top of your <body>:
 
-	<script>document.getElementsByTagName('html')[0].className += " js"</script>
+```html
+<script>document.getElementsByTagName('html')[0].className += " js"</script>
+```
 
 Have opinions about how you want to deal with hi-DPI displays? You'll want to tweak the fuzzyFactor. From the comments:
 
