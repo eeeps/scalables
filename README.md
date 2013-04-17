@@ -1,6 +1,6 @@
 # scalables
 
-A responsive bitmap images thing, centered around the idea that we should describing resources rather than viewport conditions, allowing for a full separation of content and presentation.
+A responsive bitmap images thing, focusing on describing resources rather than viewport conditions, allowing for a full separation of content and presentation.
 
 &lt;data-scalable&gt; elements contain one thumbnail &lt;img&gt; and any number of larger images, linked to in &lt;a&gt; elements with explicit "data-width" and "data-height" attributes. Like this:
 
