@@ -16,9 +16,9 @@ A responsive bitmap images thing, focusing on markup which describes resources r
 </div>
 ```
 
-On load, scalables.js parses this and stores all of these versions & their sizes.
+On load, scalables.js parses this and stores all of these source URLs & their sizes.
 
-On load and after any resize or orientationchange event, scalables.js evaluates how much room is available for the image within the current layout context, swaps a single &lt;img&gt; element in for all of that fallback content, and loads the appropriate source.
+On load and after any resize or orientationchange event, scalables.js evaluates how much room is available for the image within the current layout context, swaps a single &lt;img&gt; element in for all of that fallback content, resizes it to fit the context, and loads the appropriate source.
 
 ## examples
 
