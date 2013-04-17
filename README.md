@@ -2,7 +2,7 @@
 
 A responsive bitmap images thing, focusing on describing resources rather than viewport conditions, allowing for a full separation of content and presentation.
 
-&lt;data-scalable&gt; elements contain one thumbnail &lt;img&gt; and any number of larger images, linked to in &lt;a&gt; elements with explicitly marked-up data-width and data-height attributes. Like this:
+&lt;data-scalable&gt; elements contain one thumbnail &lt;img&gt; and any number of larger images, linked to in &lt;a&gt; elements with explicit "data-width" and "data-height" attributes. Like this:
 
 ```html
 <div data-scalable>
@@ -26,7 +26,7 @@ This arose as an attempt to give form to some of the thoughts I found myself spi
 
 ## little things
 
-If you don't want the un-scaled thumbnail to flash, you'll need to include scalables.css and something or other which will add a "js" class to the html element. Modernizr works; so will adding this to the top of your <body>:
+If you don't want the un-scaled thumbnail to flash, you'll need to include scalables.css and something or other which will add a "js" class to the html element. Modernizr works; so will adding this to the top of your &lt;body&gt;:
 
 ```html
 <script>document.getElementsByTagName('html')[0].className += " js"</script>
