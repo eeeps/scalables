@@ -20,6 +20,11 @@ On load, scalables.js parses this and stores all of these versions & their sizes
 
 On load and after any resize or orientationchange event, scalables.js evaluates how much room is available for the image within the current layout context, swaps a single &lt;img&gt; element in for all of that fallback content, and loads the appropriate source.
 
+## examples
+
+- [Big pictures from spain](http://eeeps.github.com/scalables/examples/spain.html)
+- [A blog about oats](http://eeeps.github.com/scalables/examples/blog.html)
+
 ## styling
 
 Apply any & all sizing & positioning styles to the parent, &lt;data-scalable&gt; element and not to the &lt;img&gt; itself, which has its width and height styles explicitly set by the script such that it will fill & fit within the parent.
@@ -52,12 +57,6 @@ Scalables.js adds an "enhanced" class to the root element, allowing you to style
 	padding: 0.25em;
 	}
 ```
-
-
-## examples
-
-- [Big pictures from spain](http://eeeps.github.com/scalables/examples/spain.html)
-- [A blog about oats](http://eeeps.github.com/scalables/examples/blog.html)
 
 ## why, thanks
 
