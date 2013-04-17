@@ -20,7 +20,7 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 
 ## why, thanks
 
-This arose as an attempt to give form to some of the thoughts I found myself spitting out [here](http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037772.html), [here](http://lists.w3.org/Archives/Public/public-respimg/2012Nov/0001.html), and [here](http://24ways.org/2012/responsive-images-what-we-thought-we-needed/). Huge thanks to Paul Robert Lloyd in particular for a tremendously helpful email exchange, and for a lot of the ideas, not to mention the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of. (Josh Emerson, too!)
+This arose as an attempt to give form to some of the thoughts I found myself spitting out [here](http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037772.html), [here](http://lists.w3.org/Archives/Public/public-respimg/2012Nov/0001.html), and [here](http://24ways.org/2012/responsive-images-what-we-thought-we-needed/). Huge thanks to Paul Robert Lloyd in particular for a tremendously helpful email exchange, and for a lot of the ideas—not to mention the [actual code](https://github.com/paulrobertlloyd/data-imgsrc)—that this grew out of. (Josh Emerson, too!)
 
 ## little things
 
