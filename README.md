@@ -20,7 +20,7 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 
 ## styling
 
-Add all size-constraint styles to the parent, &lt;data-scalable&gt; element and not the &lt;img&gt; itself, which has its width and height styles explicitly set by the script such that it fits the parent.
+Apply any & all sizing styles to the parent, &lt;data-scalable&gt; element and not the &lt;img&gt; itself, which has its width and height styles explicitly set by the script such that it fits the parent.
 
 Scalables.js adds an "enhanced" class to the root element, allowing you to style your fallback thumbnail + text separately from your enhanced, scaled images.
 
