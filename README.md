@@ -1,5 +1,4 @@
-scalables
-=========
+# scalables
 
 A responsive bitmap images thing, focusing on describing resources rather than viewport conditions, allowing for a full separation of content and presentation.
 
@@ -19,13 +18,11 @@ On load and after any resize or orientationchange event, scalables.js evaluates 
 
 When styling your scalables – setting widths, max-heights, or what-have-you – style the containing <data-scalable> element, NOT the img within.
 
-thanks
-------
+## why, thanks
 
-This arose as an attempt to give form to some of the thoughts I spat out (here)[http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037772.html], (here)[http://lists.w3.org/Archives/Public/public-respimg/2012Nov/0001.html], and (here)[http://24ways.org/2012/responsive-images-what-we-thought-we-needed/]. Huge thanks to Paul Robert Lloyd in particular for a tremendously helpful email exchange, and for the (code that this grew out of)[https://github.com/paulrobertlloyd/responsivepatterns]. (Josh Emerson, too!)
+This arose as an attempt to give form to some of the thoughts I found myself spitting out [here](http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037772.html), [here](http://lists.w3.org/Archives/Public/public-respimg/2012Nov/0001.html), and [here](http://24ways.org/2012/responsive-images-what-we-thought-we-needed/). Huge thanks to Paul Robert Lloyd in particular for a tremendously helpful email exchange, and for a lot of the ideas, not to mention the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of. (Josh Emerson, too!)
 
-little things
--------------
+## little things
 
 If you don't want the un-scaled thumbnail to flash, you'll need to include scalables.css and something or other which will add a "js" class to the html element. Modernizr works; so will adding this to the top of your <body>:
 
