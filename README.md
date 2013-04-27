@@ -6,7 +6,7 @@ A responsive bitmap images thing, focusing on markup which describes resources r
 
 ```html
 <div data-scalable>
-	<img src="thumb.jpg" data-width="100" height="100" alt="" />
+	<img src="thumb.jpg" data-width="100" data-height="100" alt="" />
 	<p>View image:</p>
 	<ul>
 		<li><a href="full.jpg" data-width="1024" data-height="1024">fullsize (1024 x 1024 pixels, 213 kB)</a></li>
@@ -18,7 +18,7 @@ A responsive bitmap images thing, focusing on markup which describes resources r
 
 On load, scalables.js parses this and stores the source URLs & their pixel dimensions.
 
-On load and after any resize or orientationchange event, the script looks at how big the &lt;img&gt; is on the layout and swaps in an appropriately-large source.
+On load and after any 'resize' or 'orientationchange' event, the script looks at how big the &lt;img&gt; is on the layout and swaps in an appropriately-large source.
 
 
 ## examples
@@ -33,7 +33,7 @@ We're trying to free images from having a single, definitive, baked-in & fixed s
 
 If you don't scale your initial thumbnail (usually *up*) to fit your layout in CSS, when the script looks at how big the &lt;img&gt; is it will see it at its default (native) dimensions and won't load any of the larger sources.
 
-Practically, if you've been working images into fluid layouts in the past using the conventionally-wise techniques, this will usually simply mean writing 'width="100%;' where you had been writing 'max-width: 100%;'
+Practically, if you've been working images into fluid layouts in the past using the conventionally-wise techniques, this will mean writing 'width="100%;' where you had been writing 'max-width: 100%;'
 
 
 ## hiding the links
@@ -56,7 +56,7 @@ Then you can hide the links like this:
 
 ## double the http requests, double the fun
 
-We always load the thumbnails, so more often than not we end up incurring 2 HTTP requests per &lt;data-scalable&gt;. On the bright side, given that the thumbnails are small, the initial page load (built around a bunch of blurry, scaled-up images) happens blazingly fast. We incur a small bandwidth (and potentially large latency) hit, but in exchange we get a huge gain in perceived speed & time-to-first-render.
+We always load the thumbnails, so more often than not we end up incurring 2 HTTP requests per &lt;data-scalable&gt;. On the bright side, given that the thumbnails are small, the initial page load (built around a bunch of blurry, scaled-up images) happens blazingly fast. So despite the fact that we're "loading the image twice", everything *appears* much faster.
 
 
 ## retina & co.
