@@ -1,14 +1,9 @@
 * { box-sizing: border-box; }
 
-html, body {
-	height: 100%;
-}
-
 body {
     font-family: sans-serif;
     font-size: 0.825em;
     }
-
 
 .photo {
 	margin: 1em 0;
@@ -27,4 +22,4 @@ body {
 
 /* fit-height.js adds this class to imgs that are taller than the viewport */
 
-.tall { height: 90%; width: auto !important; }
+.tall { height: 90vh; width: auto !important; }
