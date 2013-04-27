@@ -1,12 +1,10 @@
-// css currently can't make an <img> potentially shrink-to-fit OR expand-to-fill a given height and a width AND preserve it's aspect ratio.
-// you know, like "background-size: contain" can.
-// this is a kind of workaround for that...
+// combines with the css to form a sloppy workaround for 'object-fit: contain' and 'vh' units not being supported
 
 (function() {
 
 var fitHeight = function() {
 
-	var els = document.querySelectorAll('[data-scalable]');
+	var els = document.querySelectorAll('.photo');
 	for ( var i = 0, len = els.length; i < len; i++ ) {
 
 		var img = els[i].getElementsByTagName('img')[0];
@@ -15,11 +13,9 @@ var fitHeight = function() {
 		var constrainingRatio = window.innerWidth / (window.innerHeight * .9);
 
 		if (imgRatio < constrainingRatio) {
-			img.classList.add('tall');
-			img.classList.remove('wide');
+			els[i].classList.add('tall');
 		} else {
-			img.classList.remove('tall');
-			img.classList.add('wide');
+			els[i].classList.remove('tall');
 		}
 	}
 }

@@ -9,6 +9,8 @@ body {
 	margin: 1em 0;
 	}
 
+
+/* for this example we're only scaling up if we have js */
 .js .photo img {
 	display: block;
 	margin: 0 auto;
@@ -16,21 +18,50 @@ body {
 	}
 
 	
+/* hide the fallback links */
 .js .photo *:not(img) {
 	display: none;
+	}
+
+
+/* height fitting */
+
+/* the future, wouldn't that be nice?
+   as of april 2013 these styles will apply in zero browsers.
+   
+   see:
+   http://dev.opera.com/articles/view/css3-object-fit-object-position/
+   http://caniuse.com/object-fit
+   http://caniuse.com/viewport-units
+*/
+.js.cssvhunit.object-fit .photo img {
+	
+	max-height: 90vh;
+	-webkit-object-fit: contain;
+	-moz-object-fit: contain;
+	-ms-object-fit: contain;
+	-o-object-fit: contain;
+	object-fit: contain;
+
+	}
+
+/* the present */
+
+/* fit-height.js adds a 'tall' class to .photos that are taller than 90% of the viewport.
+   we then define explicit heights for every containing element in order to size these with a pct-based height.
+*/
+
+.js.no-cssvhunit html, .js.no-object-fit html,
+.js.no-cssvhunit body, .js.no-object-fit body,
+.js.no-cssvhunit article, .js.no-object-fit article {
+	height: 100%;
 }
 
-/* fit-height.js adds 'tall' class to imgs that are taller than the viewport */
+.js.no-cssvhunit .tall, .js.no-object-fit .tall {
+	height: 90%;
+}
 
-/* I wish the vh unit worked consistently across browsers */
-@media (min-height: 256px) { .tall { height: 250px; width: auto !important; } }
-@media (min-height: 384px) { .tall { height: 375px; } }
-@media (min-height: 512px) { .tall { height: 500px; } }
-@media (min-height: 768px) { .tall { height: 750px; } }
-@media (min-height: 1024px) { .tall { height: 1000px; } }
-@media (min-height: 1536px) { .tall { height: 1500px; } }		
-@media (min-height: 2048px) { .tall { height: 2000px; } }
-@media (min-height: 3072px) { .tall { height: 3000px; } }		
-@media (min-height: 4096px) { .tall { height: 4000px; } }
-
-.tall { height: 90vh; }
+.js.no-cssvhunit .tall img, .js.no-object-fit .tall img {
+	height: 100%;
+	width: auto !important;
+}
