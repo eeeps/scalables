@@ -70,7 +70,7 @@ html, body, article {
 	height: 90%;
 }
 
-.no-cssvhunit .tall img, .no-object-fit .tall img {
+.tall img {
 	height: 100%;
 	width: auto !important;
 }
