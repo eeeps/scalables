@@ -24,53 +24,68 @@ body {
 	}
 
 
+
 /* height fitting */
+/* it's hard! */
 
-/* the future, wouldn't that be nice?
-   as of april 2013 these styles will apply in zero browsers.
-   
-   see:
-   http://dev.opera.com/articles/view/css3-object-fit-object-position/
-   http://caniuse.com/object-fit
-   http://caniuse.com/viewport-units
-*/
-.cssvhunit.object-fit .photo img {
-	
-	max-height: 90vh;
-	-webkit-object-fit: contain;
-	-moz-object-fit: contain;
-	-ms-object-fit: contain;
-	-o-object-fit: contain;
-	object-fit: contain;
 
-	}
+/* the present
+   fit-height.js adds a 'tall' class to .photos that will end up taller than 90% of the viewport.
+   define explicit heights for every containing element in order to size the .tall imgs with a pct-based height.
+   */
 
-/* the present */
-
-/* fit-height.js adds a 'tall' class to .photos that are taller than 90% of the viewport.
-   we then define explicit heights for every containing element in order to size these with a pct-based height.
-   
-   dosen't work in opera ):
-   
-*/
-
-/*
-.no-cssvhunit html, .no-object-fit html,
-.no-cssvhunit body, .no-object-fit body,
-.no-cssvhunit article, .no-object-fit article
-*/
 
 html, body, article {
 	height: 100%;
-}
-
-/* .no-cssvhunit .tall, .no-object-fit .tall */
+	}
 
 .tall {
 	height: 90%;
-}
+	}
 
 .tall img {
 	height: 100%;
 	width: auto !important;
-}
+	}
+
+/* opera and mobile safari seem to have trouble scaling an <img> to a percentage-based height (all of the parents were sized properly in both browsers). So I added a modernizr test in the fit-height script. if we can't scale <img>s based on percentage-heights, fit to some reasonable maximum... */
+
+.no-img-pct-height .tall img {
+	height: 50em;
+	}
+
+
+/* the future
+    wouldn't that be nice?
+
+   as of april 2013 this works in no browsers.
+   see:
+   http://dev.opera.com/articles/view/css3-object-fit-object-position/
+   http://caniuse.com/object-fit
+   http://caniuse.com/viewport-units
+   */
+
+/* undo all of that previous junk */
+.cssvhunit.object-fit html,
+.cssvhunit.object-fit body,
+.cssvhunit.object-fit article,
+.cssvhunit.object-fit .tall {
+	height: auto;
+	}
+.cssvhunit.object-fit .tall img {
+	height: auto;
+	width: 100%;
+	}
+
+/* <wistfully> someday these two lines will be all that we need... */
+.cssvhunit.object-fit .photo img {
+	max-height: 90vh;
+	object-fit: contain;
+	
+	-o-object-fit: contain;
+	-ms-object-fit: contain;
+	-moz-object-fit: contain;
+	-webkit-object-fit: contain;
+	
+	}
+
