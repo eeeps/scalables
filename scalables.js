@@ -5,9 +5,11 @@
     released to the public domain or whatever. */
 
 
+(function() {
+
 
 // debouncing function from John Hann
-// resize events can fire like crazy. this limits their rate a bit.
+// resize events can fire like crazy. this calms them down.
 // http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
 
 var debounce = function (func, threshold, execAsap) {
@@ -61,6 +63,7 @@ function Scalable(el) {
 	this.el = el;
 	
 	// store version dimensions + sources
+	
 	this.versions = [];
 	
 	// parse the thumb
@@ -72,7 +75,7 @@ function Scalable(el) {
 	});
 	
 	// parse the linked versions
-	var links = el.querySelectorAll( '[data-scalable] a[data-width][data-height]' );
+	var links = el.querySelectorAll( 'a[data-width][data-height]' );
     for ( var i = 0, len = links.length; i < len; i++ ) {
 	    this.versions.push({
 	    	src: links[i].getAttribute('href'),
@@ -155,4 +158,4 @@ window.addEventListener('resize', debounce(loadTheScalables, 200, false), false)
 window.addEventListener('orientationchange', loadTheScalables, false);
 
 
-
+})();

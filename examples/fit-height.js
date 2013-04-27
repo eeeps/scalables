@@ -6,7 +6,6 @@
 
 var fitHeight = function() {
 
-	console.log('fitheight');
 	var els = document.querySelectorAll('[data-scalable]');
 	for ( var i = 0, len = els.length; i < len; i++ ) {
 
