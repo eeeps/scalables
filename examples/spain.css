@@ -20,6 +20,17 @@ body {
 	display: none;
 }
 
-/* fit-height.js adds this class to imgs that are taller than the viewport */
+/* fit-height.js adds 'tall' class to imgs that are taller than the viewport */
 
-.tall { height: 90vh; width: auto !important; }
+/* I wish the vh unit worked consistently across browsers */
+@media (min-height: 256px) { .tall { height: 250px; width: auto !important; } }
+@media (min-height: 384px) { .tall { height: 375px; } }
+@media (min-height: 512px) { .tall { height: 500px; } }
+@media (min-height: 768px) { .tall { height: 750px; } }
+@media (min-height: 1024px) { .tall { height: 1000px; } }
+@media (min-height: 1536px) { .tall { height: 1500px; } }		
+@media (min-height: 2048px) { .tall { height: 2000px; } }
+@media (min-height: 3072px) { .tall { height: 3000px; } }		
+@media (min-height: 4096px) { .tall { height: 4000px; } }
+
+.tall { height: 90vh; }
