@@ -50,6 +50,10 @@ html, body, article {
 
 /* opera and mobile safari seem to have trouble scaling an <img> to a percentage-based height (all of the parents were sized properly in both browsers). So I added a modernizr test in the fit-height script. if we can't scale <img>s based on percentage-heights, fit to some reasonable maximum... */
 
+.no-img-pct-height .tall {
+	height: auto;
+	}
+
 .no-img-pct-height .tall img {
 	height: 50em;
 	}
