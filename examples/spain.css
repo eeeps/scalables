@@ -54,17 +54,17 @@ body {
    
 */
 
-.js.no-cssvhunit html, .js.no-object-fit html,
-.js.no-cssvhunit body, .js.no-object-fit body,
-.js.no-cssvhunit article, .js.no-object-fit article {
+.no-cssvhunit html, .no-object-fit html,
+.no-cssvhunit body, .no-object-fit body,
+.no-cssvhunit article, .no-object-fit article {
 	height: 100%;
 }
 
-.js.no-cssvhunit .tall, .js.no-object-fit .tall {
+.no-cssvhunit .tall, .no-object-fit .tall {
 	height: 90%;
 }
 
-.js.no-cssvhunit .tall img, .js.no-object-fit .tall img {
+.no-cssvhunit .tall img, .no-object-fit .tall img {
 	height: 100%;
 	width: auto !important;
 }
