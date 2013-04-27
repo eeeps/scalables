@@ -29,7 +29,7 @@ On load and after any 'resize' or 'orientationchange' event, the script looks at
 
 ## sizing with css
 
-We're trying to free images from having a single, definitive, baked-in & fixed size, and discard the notion that a file's intrinsic pixel dimensions should have anything whatsoever to do with how large it appears on a layout. Thus, you must explicitly size your image in CSS with 'width' or 'height' styles for this script to do anything useful.
+We're trying to free &lt;img&gt;s from the straitjacket of a single, definitive, baked-in & fixed size, and discard the notion that a file's intrinsic pixel dimensions should have anything whatsoever to do with how large it appears on a layout. Thus, you must explicitly size your image in CSS with 'width' or 'height' styles for this script to do anything useful.
 
 If you don't scale your initial thumbnail (usually *up*) to fit your layout in CSS, when the script looks at how big the &lt;img&gt; is it will see it at its default (native) dimensions and won't load any of the larger sources.
 
@@ -49,7 +49,7 @@ If you're not already checking for JS with something like modernizr, add this to
 Then you can hide the links like this:
 
 ```css
-.js [data-scalables] *:not(img) {
+.js [data-scalable] *:not(img) {
 	display: none;
 }
 ```
