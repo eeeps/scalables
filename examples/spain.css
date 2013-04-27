@@ -34,7 +34,7 @@ body {
    http://caniuse.com/object-fit
    http://caniuse.com/viewport-units
 */
-.js.cssvhunit.object-fit .photo img {
+.cssvhunit.object-fit .photo img {
 	
 	max-height: 90vh;
 	-webkit-object-fit: contain;
@@ -54,13 +54,19 @@ body {
    
 */
 
+/*
 .no-cssvhunit html, .no-object-fit html,
 .no-cssvhunit body, .no-object-fit body,
-.no-cssvhunit article, .no-object-fit article {
+.no-cssvhunit article, .no-object-fit article
+*/
+
+html, body, article {
 	height: 100%;
 }
 
-.no-cssvhunit .tall, .no-object-fit .tall {
+/* .no-cssvhunit .tall, .no-object-fit .tall */
+
+.tall {
 	height: 90%;
 }
 
