@@ -49,6 +49,9 @@ body {
 
 /* fit-height.js adds a 'tall' class to .photos that are taller than 90% of the viewport.
    we then define explicit heights for every containing element in order to size these with a pct-based height.
+   
+   dosen't work in opera ):
+   
 */
 
 .js.no-cssvhunit html, .js.no-object-fit html,
