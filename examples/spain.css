@@ -8,7 +8,10 @@ body {
 .photo {
 	margin: 1em 0;
 	}
-
+	
+.photo:last-child {
+	padding-bottom: 3em;
+	}
 
 /* for this example we're only scaling up if we have js */
 .js .photo img {
@@ -17,7 +20,6 @@ body {
 	width: 100%;
 	}
 
-	
 /* hide the fallback links */
 .js .photo *:not(img) {
 	display: none;
@@ -48,7 +50,7 @@ html, body, article {
 	width: auto !important;
 	}
 
-/* opera and mobile safari seem to have trouble scaling an <img> to a percentage-based height (all of the parents were sized properly in both browsers). So I added a modernizr test in the fit-height script. if we can't scale <img>s based on percentage-heights, fit to some reasonable maximum... */
+/* opera and mobile safari seem to have trouble scaling an <img> to a percentage-based height. So I added a modernizr test in the fit-height script. if we can't scale <img>s based on percentage-heights, fit to some reasonable maximum... */
 
 .no-img-pct-height .tall {
 	height: auto;

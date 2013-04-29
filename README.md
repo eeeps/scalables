@@ -20,6 +20,7 @@ On load, scalables.js parses this and stores the source URLs & their pixel dimen
 
 On load and after any 'resize' or 'orientationchange' event, the script looks at how big the &lt;img&gt; is on the layout and swaps in an appropriately-large source.
 
+I wrote a couple-thousand words about the rationale behind all of it [here](http://ericportis.com/posts/2013/scalables/).
 
 ## examples
 
@@ -29,7 +30,7 @@ On load and after any 'resize' or 'orientationchange' event, the script looks at
 
 ## sizing with css
 
-We're trying to free &lt;img&gt;s from the straightjacket of a single, definitive, baked-in & fixed size, and discard the notion that a file's intrinsic pixel dimensions should have anything whatsoever to do with how large it appears on a layout. Thus, you must explicitly size your image in CSS with 'width' or 'height' styles for this script to do anything useful.
+You must explicitly size your image in CSS with 'width' or 'height' styles (but not both, [yet!](http://caniuse.com/object-fit)) for this script to do anything useful.
 
 If you don't scale your initial thumbnail (usually *up*) to fit your layout in CSS, when the script looks at how big the &lt;img&gt; is it will see it at its default (native) dimensions and won't load any of the larger sources.
 
@@ -54,11 +55,6 @@ Then you can hide the links like this:
 }
 ```
 
-## double the http requests, double the fun
-
-We always load the thumbnails, so more often than not we end up incurring 2 HTTP requests per &lt;data-scalable&gt;. On the bright side, given that the thumbnails are small, the initial page load (built around a bunch of blurry, scaled-up images) happens blazingly fast. So despite the fact that we're "loading the image twice", everything *appears* much faster.
-
-
 ## retina & co.
 
 Have opinions about how you want to deal with hi-DPI displays? You'll want to tweak the fuzzyFactor. From the comments:
@@ -66,12 +62,12 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 	// fuzzyFactor!
 	// A number between 0-1 that determines how we want to deal with device-pixel-ratios above 1
 	// lower = more quality, higher = faster loads
-	// 0 = images will always render as crisply as the device will allow (effective image of resolution of 2x @ 2x, 3x @ 3x, etc.)
-	// 1 = screw device pixels, I only care about css-px (effective image of resolution of 1x @ 2x, 1x @ 3x, etc.)
-	// 0.5 = eric's pick (effective image of resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
+	// 0 = images will always render as crisply as the device will allow (effective image resolution of 2x @ 2x, 3x @ 3x, etc.)
+	// 1 = screw device pixels, I only care about css-px (effective image resolution of 1x @ 2x, 1x @ 3x, etc.)
+	// 0.5 = eric's pick (effective image resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
 	// note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
 
 
-## why, thanks
+## thanks
 
-This arose as an attempt to give form to some of the thoughts I found myself spitting [here](http://lists.whatwg.org/htdig.cgi/whatwg-whatwg.org/2012-November/037772.html), [here](http://lists.w3.org/Archives/Public/public-respimg/2012Nov/0001.html), and [here](http://24ways.org/2012/responsive-images-what-we-thought-we-needed/). Huge thanks to Paul Robert Lloyd in particular for a helpful email exchange & for a strong, well-articulated point of view, which I found myself embracing and pushing back on in equal measure. Also thanks to Mr. Lloyd (and Josh Emerson!) for the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of.
+Particular thanks are due to Paul Robert Lloyd Lloyd and Josh Emerson for the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of.

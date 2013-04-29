@@ -43,9 +43,9 @@ var debounce = function (func, threshold, execAsap) {
 
 // A number between 0-1 that determines how we want to deal with device-pixel-ratios above 1
 // lower = more quality, higher = faster loads
-// 0 = images will always render as crisply as the device will allow (effective image of resolution of 2x @ 2x, 3x @ 3x, etc.)
-// 1 = screw device pixels, I only care about css-px (effective image of resolution of 1x @ 2x, 1x @ 3x, etc.)
-// 0.5 = eric's pick (effective image of resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
+// 0 = images will always render as crisply as the device will allow (effective image resolution of 2x @ 2x, 3x @ 3x, etc.)
+// 1 = screw device pixels, I only care about css-px (effective image resolution of 1x @ 2x, 1x @ 3x, etc.)
+// 0.5 = eric's pick (effective image resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
 // note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
 
 var fuzzyFactor = 0.5,
@@ -90,8 +90,10 @@ function Scalable(el) {
 
 Scalable.prototype.loadImg = function() {
 
-    // determine the number of pixels we want to paint across the image's width
-	var minPx = this.el.getElementsByTagName('img')[0].clientWidth * pixelRatio;
+	// we'll be using this alot
+	var img = this.el.getElementsByTagName('img')[0],
+        // determine the number of pixels we want to paint across the image's width
+	    minPx = img.clientWidth * pixelRatio;
 		
 	// get versions with a width greater than or equal to our minPx
 	var biggerThanMin = [];
@@ -123,8 +125,8 @@ Scalable.prototype.loadImg = function() {
 	}
 
 	// load the source
-    this.el.getElementsByTagName('img')[0].src = this.currentVersion.src;
-
+    img.src = this.currentVersion.src;
+    
 }
 
 
