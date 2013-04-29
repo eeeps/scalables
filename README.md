@@ -70,7 +70,7 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 
 ## bonus
 
-I'm including the Photoshop script that I use to export images at a range of resolutions & output appropriate scalables.js markup for them. It was hacked together rather quickly but it has worked for me!
+"Make Scalable Image.jsx" is a Photoshop script that I hacked together rather abruptly to export images at a range of resolutions & output appropriate scalables.js markup for them. It comes with less than no guarantee, but it has worked for me!
 
 
 ## thanks
