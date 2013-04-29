@@ -68,6 +68,11 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 	// note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
 
 
+## bonus
+
+I'm including the Photoshop script that I use to export images at a range of resolutions & output appropriate scalables.js markup for them. It was hacked together rather quickly but it has worked for me!
+
+
 ## thanks
 
 Particular thanks are due to Paul Robert Lloyd Lloyd and Josh Emerson for the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of.
