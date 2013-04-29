@@ -75,4 +75,4 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 
 ## thanks
 
-Particular thanks are due to Paul Robert Lloyd Lloyd and Josh Emerson for the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of.
+Particular thanks are due to Paul Robert Lloyd and Josh Emerson for the [actual code](https://github.com/paulrobertlloyd/data-imgsrc) that this grew out of.
