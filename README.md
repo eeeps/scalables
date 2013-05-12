@@ -68,6 +68,11 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 	// note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
 
 
+## scalable `<picture>`s
+
+"scalable-pictures.js" is an experiment in marking up scalable images with the proposed `<picture>` and `<source>` elements. 
+
+ 
 ## bonus
 
 "Make Scalable Image.jsx" is a Photoshop script that I hacked together rather abruptly to export images at a range of resolutions & output appropriate scalables.js markup for them. It comes with less than no guarantee, but it has worked for me!

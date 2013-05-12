@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Scalable Pictures</title>
+
+	<style>
+		picture { width: 50%; }
+	</style>
+
+</head>
+
+<body>
+
+	<picture data-scalable src="http://placehold.it/96&text=thumb" data-width="96" data-height="96">
+		<source src="http://placehold.it/320&text=320" data-width="320" data-height="320" />
+		<source src="http://placehold.it/640&text=640" data-width="640" data-height="640" />
+	 	<img src="http://placehold.it/320&text=fallback" alt="fallback" />
+	</picture>
+
+	<script src="../scalable-pictures.js"></script>
+
+</body>
+</html>
