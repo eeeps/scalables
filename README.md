@@ -72,7 +72,10 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 
 "scalable-pictures.js" is an experiment in marking up scalable images with the proposed `<picture>` and `<source>` elements. 
 
- 
+- [Example markup](https://github.com/eeeps/scalables/blob/master/examples/scalable-pictures.html)
+- [Live example](http://eeeps.github.io/scalables/examples/scalable-pictures.html) (you'll need Yoav Weiss' [`<picture>`-enabled Chromium build](https://github.com/yoavweiss/RespImg-WebCore/downloads) to see anything other than the fallback content)
+
+
 ## bonus
 
 "Make Scalable Image.jsx" is a Photoshop script that I hacked together rather abruptly to export images at a range of resolutions & output appropriate scalables.js markup for them. It comes with less than no guarantee, but it has worked for me!
