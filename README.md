@@ -2,7 +2,7 @@
 
 A responsive bitmap images thing, focusing on markup which describes resources rather than viewport conditions, allowing for a full separation of content and presentation.
 
-&lt;data-scalable&gt; elements contain one thumbnail &lt;img&gt; and any number of larger sources, linked to in &lt;a&gt; elements. The &lt;img&gt; and the &lt;a&gt;s have "data-width" and "data-height" attributes which describe the size (in pixels) of the linked file. Like this:
+`<data-scalable>` elements contain one thumbnail `<img>` and any number of larger sources, linked to in `<a>` elements. The `<img>` and the `<a>`s have `data-width` and `data-height` attributes which describe the size (in pixels) of the linked file. Like this:
 
 ```html
 <div data-scalable>
@@ -18,7 +18,7 @@ A responsive bitmap images thing, focusing on markup which describes resources r
 
 On load, scalables.js parses this and stores the source URLs & their pixel dimensions.
 
-On load and after any 'resize' or 'orientationchange' event, the script looks at how big the &lt;img&gt; is on the layout and swaps in an appropriately-large source.
+On load and after any 'resize' or 'orientationchange' event, the script looks at how big the `<img>` is on the layout and swaps in an appropriately-large source.
 
 I wrote a couple-thousand words about the rationale behind all of it [here](http://ericportis.com/posts/2013/scalables/).
 
@@ -30,18 +30,18 @@ I wrote a couple-thousand words about the rationale behind all of it [here](http
 
 ## sizing with css
 
-You must explicitly size your image in CSS with 'width' or 'height' styles (but not both, [yet!](http://caniuse.com/object-fit)) for this script to do anything useful.
+You must explicitly size your image in CSS with `width` or `height` styles (but not both, [yet!](http://caniuse.com/object-fit)) for this script to do anything useful.
 
-If you don't scale your initial thumbnail (usually *up*) to fit your layout in CSS, when the script looks at how big the &lt;img&gt; is it will see it at its default (native) dimensions and won't load any of the larger sources.
+If you don't scale your initial thumbnail (usually *up*) to fit your layout in CSS, when the script looks at how big the `<img>` is it will see it at its default (native) dimensions and won't load any of the larger sources.
 
-Practically, if you've been working images into fluid layouts in the past using the conventionally-wise techniques, this will mean writing 'width="100%;' where you had been writing 'max-width: 100%;'
+Practically, if you've been working images into fluid layouts in the past using the conventionally-wise techniques, this will mean writing `width: 100%;` where you had been writing `max-width: 100%;`
 
 
 ## hiding the links
 
 If you want to hide the links to the image at all of its various sizes (which, [maybe](http://www.flickr.com/photos/zipco-and-cal/8380266109/sizes/l) you [don't](http://en.wikipedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg)?), you must check for Javascript support first and only hide if you're reasonably certain that the script will run.
 
-If you're not already checking for JS with something like modernizr, add this to your page (above the &lt;data-scalable&gt;s):
+If you're not already checking for JS with something like modernizr, add this to your page (above the `data-scalable`s):
 
 ```html
 <script>document.getElementsByTagName('html')[0].className += " js"</script>
@@ -59,6 +59,7 @@ Then you can hide the links like this:
 
 Have opinions about how you want to deal with hi-DPI displays? You'll want to tweak the fuzzyFactor. From the comments:
 
+```
 	// fuzzyFactor!
 	// A number between 0-1 that determines how we want to deal with device-pixel-ratios above 1
 	// lower = more quality, higher = faster loads
@@ -66,7 +67,7 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 	// 1 = screw device pixels, I only care about css-px (effective image resolution of 1x @ 2x, 1x @ 3x, etc.)
 	// 0.5 = eric's pick (effective image resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
 	// note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
-
+```
 
 ## scalable `<picture>`s
 
@@ -78,7 +79,9 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 
 ## bonus
 
-"Make Scalable Image.jsx" is a Photoshop script that I hacked together rather abruptly to export images at a range of resolutions & output appropriate scalables.js markup for them. It comes with less than no guarantee, but it has worked for me!
+[`scalable-tag.rb`](http://github.com/eeeps/jekyll-scalables) is a Jekyll plugin which makes authoring `scalables.js`-compliant markup and generating downsized images as easy as pointing to the full-sized image in a custom Jekyll tag and letting the plugin do the rest.
+
+[`Make Scalable Image.jsx`](http://github.com/eeeps/photoshop-scalables) is a Photoshop script that I hacked together to generate `scalables.js` markup and source-files.
 
 
 ## thanks
