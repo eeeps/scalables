@@ -79,9 +79,9 @@ Have opinions about how you want to deal with hi-DPI displays? You'll want to tw
 
 ## bonus
 
-[`scalable-tag.rb`](http://github.com/eeeps/jekyll-scalables) is a Jekyll plugin which makes authoring `scalables.js`-compliant markup and generating downsized images as easy as pointing to the full-sized image in a custom Jekyll tag and letting the plugin do the rest.
+["scalable-tag.rb"](http://github.com/eeeps/jekyll-scalables) is a Jekyll plugin which makes authoring scalables.js-compliant markup and generating downsized images as easy as pointing to the full-sized image in a custom Jekyll tag and letting the plugin do the rest.
 
-[`Make Scalable Image.jsx`](http://github.com/eeeps/photoshop-scalables) is a Photoshop script that I hacked together to generate `scalables.js` markup and source-files.
+["Make Scalable Image.jsx"](http://github.com/eeeps/photoshop-scalables) is a Photoshop script that I hacked together to generate scalables.js markup and source-files.
 
 
 ## thanks
