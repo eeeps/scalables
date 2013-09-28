@@ -1,8 +1,8 @@
   //
  // Scalables.js
 //
-/*  a responsive images script by Eric Portis (ericportis.com)
-    released to the public domain or whatever. */
+/* a responsive images script by Eric Portis (ericportis.com)
+   released to the public domain or whatever. */
 
 
 (function() {
@@ -13,28 +13,23 @@
 // http://unscriptable.com/2009/03/20/debouncing-javascript-methods/
 
 var debounce = function (func, threshold, execAsap) {
-  var timeout;
-
-  return function debounced() {
-      var obj = this, args = arguments;
-      function delayed() {
-          if (!execAsap) {
-              func.apply(obj, args);
-          }
-          timeout = null; 
-      };
-
-      if (timeout) {
-          clearTimeout(timeout);
-      } else if (execAsap) {
-          func.apply(obj, args);
-      }
-      
-      timeout = setTimeout(delayed, threshold || 100); 
-  };
+	var timeout;
+	return function debounced() {
+		var obj = this, args = arguments;
+		function delayed() {
+			if (!execAsap) {
+				func.apply(obj, args);
+			}
+			timeout = null; 
+		};
+		if (timeout) {
+			clearTimeout(timeout);
+		} else if (execAsap) {
+			func.apply(obj, args);
+		}
+		timeout = setTimeout(delayed, threshold || 100); 
+	};
 }
-
-
 
 
   //
@@ -52,8 +47,6 @@ var fuzzyFactor = 0.5,
 	pixelRatio = Math.pow( (window.devicePixelRatio || 1), fuzzyFactor );
 
 
-
-
   //
  // Scalable object
 //
@@ -61,36 +54,35 @@ var fuzzyFactor = 0.5,
 function Scalable(el) {
 
 	this.el = el;
-	
+
 	// store version dimensions + sources
-	
+
 	this.versions = [];
-	
+
 	this.versions.push({
-    	src: el.getAttribute('src'),
-    	width: parseInt(el.getAttribute('data-width')),
-    	height: parseInt(el.getAttribute('data-height'))		
+		src: el.getAttribute('src'),
+		width: parseInt(el.getAttribute('data-width')),
+		height: parseInt(el.getAttribute('data-height'))		
 	});
-	
+
 	// parse the linked versions
 	var links = el.querySelectorAll( 'source' );
-    for ( var i = 0, len = links.length; i < len; i++ ) {
-	    this.versions.push({
-	    	src: links[i].getAttribute('src'),
-	    	width: parseInt( links[i].getAttribute('data-width') ),
-	    	height: parseInt( links[i].getAttribute('data-height') )
-	    });
-    }
+	for ( var i = 0, len = links.length; i < len; i++ ) {
+		this.versions.push({
+			src: links[i].getAttribute('src'),
+			width: parseInt( links[i].getAttribute('data-width') ),
+			height: parseInt( links[i].getAttribute('data-height') )
+		});
+	}
 
 }
 
 
-
 Scalable.prototype.loadImg = function() {
 
-    // determine the number of pixels we want to paint across the image's width
-    minPx = this.el.clientWidth * pixelRatio;
-		
+	// determine the number of pixels we want to paint across the image's width
+	minPx = this.el.clientWidth * pixelRatio;
+
 	// get versions with a width greater than or equal to our minPx
 	var biggerThanMin = [];
 	for ( var i = 0, len = this.versions.length; i < len; i++ ) {
@@ -98,10 +90,10 @@ Scalable.prototype.loadImg = function() {
 			biggerThanMin.push( this.versions[i] );
 		}
 	}
-	
+
 	// if there AREN'T any bigger than our min use the biggest one we have
 	if ( biggerThanMin.length == 0) {
-	
+
 		this.currentVersion = this.versions[0];
 		for ( var i = 1, len = this.versions.length; i < len; i++ ) {
 			if ( this.versions[i].width > this.currentVersion.width ) {
@@ -111,21 +103,19 @@ Scalable.prototype.loadImg = function() {
 
 	// otherwise use the smallest one that's bigger
 	} else {
-	
+
 		for ( var i = 0, len = biggerThanMin.length; i < len; i++ ) {
 			if ( i == 0 || biggerThanMin[i].width < this.currentVersion.width ) {
 				this.currentVersion = biggerThanMin[i];
 			}
 		}
-		
+
 	}
 
 	// load the source
-    this.el.src = this.currentVersion.src;
-    
+	this.el.src = this.currentVersion.src;
+
 }
-
-
 
 
   //
@@ -140,7 +130,6 @@ for ( var i = 0, len = scalableEls.length; i < len; i++ ) {
 }
 
 
-
 function loadTheScalables() {
 
 	for ( var i = 0, len = scalables.length; i < len; i++ ) {
@@ -148,7 +137,6 @@ function loadTheScalables() {
 	}
 
 }
-
 
 
 window.addEventListener('load', loadTheScalables, false);
