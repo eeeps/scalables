@@ -60,13 +60,13 @@ Then you can hide the links like this:
 Have opinions about how you want to deal with hi-DPI displays? You'll want to tweak the fuzzyFactor. From the comments:
 
 ```
-	// fuzzyFactor!
-	// A number between 0-1 that determines how we want to deal with device-pixel-ratios above 1
-	// lower = more quality, higher = faster loads
-	// 0 = images will always render as crisply as the device will allow (effective image resolution of 2x @ 2x, 3x @ 3x, etc.)
-	// 1 = screw device pixels, I only care about css-px (effective image resolution of 1x @ 2x, 1x @ 3x, etc.)
-	// 0.5 = eric's pick (effective image resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
-	// note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
+// fuzzyFactor!
+// A number between 0-1 that determines how we want to deal with device-pixel-ratios above 1
+// lower = more quality, higher = faster loads
+// 0 = images will always render as crisply as the device will allow (effective image resolution of 2x @ 2x, 3x @ 3x, etc.)
+// 1 = screw device pixels, I only care about css-px (effective image resolution of 1x @ 2x, 1x @ 3x, etc.)
+// 0.5 = eric's pick (effective image resolution of 1.414x @ 2x, 2x @ 4x, 4x @16x...)
+// note! that these are *worst-case resolutions* - once an image is stretched such that its pixel-density falls below this threshold, we load a bigger one
 ```
 
 ## scalable `<picture>`s
